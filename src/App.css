@@ -1,0 +1,323 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(248, 251, 253);
+  font-family: "Montserrat" , sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: #040d16;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rings, .rings-2, .rings-3, .rings-4, 
+.rings-5, .rings-6, .rings-7, .rings-8  {
+  position: absolute;
+  width: 100px; /* Larghezza del cerchio */
+  height: 100px; /* Altezza uguale alla larghezza */
+  background-color: transparent; /* Colore di sfondo del cerchio */
+  border: 2px solid #b4b293;
+  border-radius: 50%; /* Arrotondamento al 100%, crea il cerchio */
+  display: flex; /* Opzionale: se vuoi centrare contenuto all'interno */
+  justify-content: center; /* Centrare orizzontalmente */
+  align-items: center; /* Centrare verticalmente */
+  box-shadow: 0 0 3px 1px #fffeba;
+}
+
+.rings-2 {
+  position: absolute;
+  width: 160px; /* Larghezza del cerchio */
+  height: 160px; /* Altezza uguale alla larghezza */
+}
+
+.rings-3 {
+  width: 250px; /* Larghezza del cerchio */
+  height: 250px;
+}
+
+.rings-4 {
+  position: absolute;
+  width: 340px; /* Larghezza del cerchio */
+  height: 340px; /* Altezza uguale alla larghezza */
+}
+
+.rings-5 {
+  width: 420px; /* Larghezza del cerchio */
+  height: 420px;
+}
+
+.rings-6 {
+  position: absolute;
+  width: 520px; /* Larghezza del cerchio */
+  height: 520px; /* Altezza uguale alla larghezza */
+}
+
+.rings-7 {
+  width: 630px; /* Larghezza del cerchio */
+  height: 630px;
+}
+
+.rings-8 {
+  width: 720px; /* Larghezza del cerchio */
+  height: 720px;
+}
+
+.sun {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #fffeba;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 0 8px 4px #fffeba;
+}
+
+.mercury {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #cc8734;
+  border-radius: 50%;
+  top: 50%; /* Posizione iniziale al centro del cerchio */
+  left: 50%;
+  margin-top: -10px; /* Sposta l'elemento per centrarlo rispetto al cerchio */
+  margin-left: -10px; /* Sposta l'elemento per centrarlo rispetto al cerchio */
+  animation: rotateMercury 6s linear infinite; /* Animazione per la rotazione */
+}
+
+.venus {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #ae9773;
+  border-radius: 50%;
+  top: 50%; /* Posizione iniziale al centro del cerchio */
+  left: 50%;
+  margin-top: -12.5px; /* Sposta l'elemento per centrarlo rispetto al cerchio */
+  margin-left: -12.5px; /* Sposta l'elemento per centrarlo rispetto al cerchio */
+  animation: rotateVenus 9s linear infinite; /* Animazione per la rotazione */
+}
+
+.earth {
+  z-index: 1;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #6c8a49;
+  border-radius: 50%;
+  top: 50%; /* Posizione iniziale al centro del cerchio */
+  left: 50%;
+  margin-top: -15px; /* Sposta l'elemento per centrarlo rispetto al cerchio */
+  margin-left: -15px; /* Sposta l'elemento per centrarlo rispetto al cerchio */
+  animation: rotateEarth 12s linear infinite; /* Animazione per la rotazione */
+}
+
+.moon {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  background-color: #545553;
+  border-radius: 50%;
+  top: 50%; /* Posizione iniziale al centro del cerchio */
+  left: 50%;
+  margin-top: -5px; /* Sposta l'elemento per centrarlo rispetto al cerchio */
+  margin-left: -5px; /* Sposta l'elemento per centrarlo rispetto al cerchio */
+  animation: rotateMoon 24s linear infinite; /* Animazione per la rotazione */
+}
+
+.mars {
+  z-index: 1;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: #ba7b60;
+  border-radius: 50%;
+  top: 50%; /* Posizione iniziale al centro del cerchio */
+  left: 50%;
+  margin-top: -12px; /* Sposta l'elemento per centrarlo rispetto al cerchio */
+  margin-left: -12px; /* Sposta l'elemento per centrarlo rispetto al cerchio */
+  animation: rotateMars 15s linear infinite; /* Animazione per la rotazione */
+}
+
+.jupiter {
+  z-index: 1;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-color: #ae8d64;
+  border-radius: 50%;
+  top: 50%; /* Posizione iniziale al centro del cerchio */
+  left: 50%;
+  margin-top: -17.5px; /* Sposta l'elemento per centrarlo rispetto al cerchio */
+  margin-left: -17.5px; /* Sposta l'elemento per centrarlo rispetto al cerchio */
+  animation: rotateJupiter 22s linear infinite; /* Animazione per la rotazione */
+}
+
+.saturn {
+  z-index: 1;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-color: #ebd4ad;
+  border-radius: 50%;
+  top: 50%; /* Posizione iniziale al centro del cerchio */
+  left: 50%;
+  margin-top: -16px; /* Sposta l'elemento per centrarlo rispetto al cerchio */
+  margin-left: -16px; /* Sposta l'elemento per centrarlo rispetto al cerchio */
+  animation: rotateSaturn 30s linear infinite; /* Animazione per la rotazione */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ring-saturn {
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid #b4b293;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 0px #fffeba;
+}
+
+.uranus {
+  z-index: 1;
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  background-color: #a9bfca;
+  border-radius: 50%;
+  top: 50%; /* Posizione iniziale al centro del cerchio */
+  left: 50%;
+  margin-top: -15.5px; /* Sposta l'elemento per centrarlo rispetto al cerchio */
+  margin-left: -15.5px; /* Sposta l'elemento per centrarlo rispetto al cerchio */
+  animation: rotateUranus 36s linear infinite; /* Animazione per la rotazione */
+}
+
+.neptune {
+  z-index: 1;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #0e162b;
+  border-radius: 50%;
+  top: 50%; /* Posizione iniziale al centro del cerchio */
+  left: 50%;
+  margin-top: -15px; /* Sposta l'elemento per centrarlo rispetto al cerchio */
+  margin-left: -15px; /* Sposta l'elemento per centrarlo rispetto al cerchio */
+  animation: rotateNeptune 42s linear infinite; /* Animazione per la rotazione */
+}
+
+.mercury, .venus, .earth, .moon,
+.mars, .jupiter, .saturn, .uranus,
+.neptune{
+  box-shadow: 0 0 3px 1px #fffeba;
+}
+
+main:nth-last-child(){
+  width: 0px; /* Larghezza del cerchio */
+  height: 0px;
+}
+
+/* Animazione di rotazione e movimento lungo il perimetro */
+@keyframes rotateMercury {
+  0% {
+    transform: rotate(30deg) translateX(50px) rotate(-30deg); /* Inizia a 30 gradi */
+  }
+  100% {
+    transform: rotate(390deg) translateX(50px) rotate(-390deg); /* Completa un giro (360 + 30) */
+  }
+}
+
+@keyframes rotateVenus {
+  0% {
+    transform: rotate(60deg) translateX(80px) rotate(-60deg); /* Inizia a 60 gradi */
+  }
+  100% {
+    transform: rotate(420deg) translateX(80px) rotate(-420deg); /* Completa un giro (360 + 60) */
+  }
+}
+
+@keyframes rotateEarth {
+  0% {
+    transform: rotate(90deg) translateX(125px) rotate(-90deg); /* Inizia a 90 gradi */
+  }
+  100% {
+    transform: rotate(450deg) translateX(125px) rotate(-450deg); /* Completa un giro (360 + 90) */
+  }
+}
+
+@keyframes rotateMoon {
+  0% {
+    transform: rotate(360deg) translateX(26px) rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg) translateX(26px) rotate(0deg);
+  }
+}
+
+@keyframes rotateMars {
+  0% {
+    transform: rotate(120deg) translateX(170px) rotate(-120deg); /* Inizia a 120 gradi */
+  }
+  100% {
+    transform: rotate(480deg) translateX(170px) rotate(-480deg); /* Completa un giro (360 + 120) */
+  }
+}
+
+@keyframes rotateJupiter {
+  0% {
+    transform: rotate(150deg) translateX(210px) rotate(-150deg); /* Inizia a 150 gradi */
+  }
+  100% {
+    transform: rotate(510deg) translateX(210px) rotate(-510deg); /* Completa un giro (360 + 150) */
+  }
+}
+
+@keyframes rotateSaturn {
+  0% {
+    transform: rotate(180deg) translateX(260px) rotate(-180deg); /* Inizia a 180 gradi */
+  }
+  100% {
+    transform: rotate(540deg) translateX(260px) rotate(-540deg); /* Completa un giro (360 + 180) */
+  }
+}
+
+@keyframes rotateUranus {
+  0% {
+    transform: rotate(210deg) translateX(315px) rotate(-210deg); /* Inizia a 210 gradi */
+  }
+  100% {
+    transform: rotate(570deg) translateX(315px) rotate(-570deg); /* Completa un giro (360 + 210) */
+  }
+}
+
+@keyframes rotateNeptune {
+  0% {
+    transform: rotate(240deg) translateX(360px) rotate(-240deg); /* Inizia a 240 gradi */
+  }
+  100% {
+    transform: rotate(600deg) translateX(360px) rotate(-600deg); /* Completa un giro (360 + 240) */
+  }
+}
