@@ -14,6 +14,11 @@ The creation of this project stems from a fascination with the cosmos and a desi
 
 Through CSS animations and clever design, this project demonstrates the power of simplicity and creativity in web development.
 
+## 🖥️ How to use it
+[![Direct link: random-people](https://img.shields.io/badge/-Direct_Link_Random_People-blue?style=flat-square&logo=Netlify&logoColor=white&link=https://solar-system-static-2d.netlify.app/)](https://solar-system-static-2d.netlify.app/)
+
+For optimal viewing, please set your browser zoom to 75%.
+
 ## 🔧 Tech stack:
 - React (for component structure)
 - CSS (animations, styling, and layout)
