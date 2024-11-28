@@ -1,6 +1,30 @@
 import './App.css'
+import { useEffect } from 'react'
 
 function App() {
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+
+      // Condizione per lo schermo specifico
+      if (width <= 1366 && height <= 679) {
+        alert("For optimal viewing, please set your browser zoom to 75%.");
+      }
+    };
+
+    // Controllo iniziale
+    checkScreenSize();
+
+    // Aggiunge un listener per aggiornamenti della finestra
+    window.addEventListener('resize', checkScreenSize);
+
+    // Cleanup del listener
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, []);
 
   return (
     <>
