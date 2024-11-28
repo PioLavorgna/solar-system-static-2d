@@ -1,6 +1,5 @@
 
-# Welcome to PioLavorgna’s GitHub page! 🔥
-# CSS-Only Solar System Simulation Project! 🌌✨
+# Welcome to PioLavorgna’s GitHub page! ✨
 
 [![Linkedin: Pio_Lavorgna](https://img.shields.io/badge/-Pio_Lavorgna-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/piolavorgna/)](https://www.linkedin.com/in/piolavorgna/)
 [![GitHub Pio_Lavorgna](https://img.shields.io/github/followers/PioLavorgna?label=follow&style=social)](https://github.com/PioLavorgna)
